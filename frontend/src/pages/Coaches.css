@@ -1,0 +1,34 @@
+.coaches-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .coaches-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .coaches-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+    gap: 20px; /* Spacing between columns */
+  }
+  
+  .coach-card {
+    flex: 1;
+    min-width: 250px; /* Ensures cards don't shrink too small */
+    max-width: 300px; /* Optional: Set a max width for the cards */
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .coach-image {
+    width: 100%;            /* Adjust to fit the screen width */
+    max-width: 600px;       /* Limit the maximum width */
+    height: auto;           /* Maintain aspect ratio */
+    margin-top: 20px;       /* Space above the image */
+    border-radius: 10px;    /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+   }

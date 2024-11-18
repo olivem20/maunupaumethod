@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;               /* Enable Flexbox for alignment */
+  justify-content: flex-end;   /* Align links to the right */
+  align-items: center;         /* Vertically center the links */
+  position: sticky;            /* Fix the navbar at the top */
+  top: 0;                      /* Align the navbar to the top */
+  left: 0;                     /* Align the navbar to the left */
+  width: 100%;                 /* Make the navbar full-width */
+  height: 100px;                /* Increase height for a thicker bar */
+  background-color: #3b9126;   /* Background color for the navbar */
+  color: white;                /* Text color for the navbar */
+  padding: 0 0px;             /* Add margin on the left and right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  z-index: 1000;               /* Ensure navbar stays above other elements */
+}
+
+.navbar-links {
+  list-style: none;            /* Remove bullet points from the list */
+  display: flex;               /* Display links in a row */
+  gap: 40px;                   /* Add spacing between the links */
+  margin: 0;
+  padding: 0 30px;
+  font-size: 1.2rem; 
+}
+
+.navbar-links a {
+  color: rgb(255, 255, 255);                /* Link color */
+  text-decoration: none;       /* Remove underline from links */
+  font-weight: bold;           /* Make the links bold */
+}
+
+.logo {
+  height: 70px;                /* Adjust logo size */
+  width: auto;                 /* Maintain aspect ratio */
+  margin-right: 450px;          /* Add spacing between logo and links */
+}
+
+.navbar-links a:hover {
+  color: #e8e8e8;              /* Light gray color on hover */
+}
+
+
+.dropdown {
+  position: relative;          /* Ensure dropdown is positioned relative to the parent */
+}
+
+.dropdown-menu {
+  display: none;               /* Hide the dropdown by default */
+  position: absolute;          /* Position it relative to the parent */
+  top: 100%;                 /* Align dropdown below the parent link */
+  left: 0;
+  width: 200px;  
+  background-color: #ffffffdf;   /* White background for the dropdown */
+  color: #333;                 /* Text color for dropdown items */
+  list-style: none;            /* Remove bullet points */
+  margin: 0;
+  padding: 10px 0;             /* Padding for dropdown items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+  z-index: 1000;               /* Ensure dropdown is above other elements */
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;          /* Add spacing for dropdown items */
+}
+
+.dropdown-menu li a {
+  color: #333;                 /* Dark text for dropdown links */
+  text-decoration: none;       /* Remove underline */
+}
+
+.dropdown-menu li a:hover {
+  color: #3b9126;              /* Green color on hover */
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px); /* Slightly offset above the parent link */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Slide into place */
+}
+
+/* Dropdown arrow styling */
+.dropdown-arrow {
+  font-size: 0.6rem;           /* Adjust arrow size (smaller than text) */
+}

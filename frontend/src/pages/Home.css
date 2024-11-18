@@ -1,0 +1,30 @@
+/* Center the title and make it larger */
+.home-container {
+    text-align: center;
+    margin-top: 20px; /* Adds spacing between title and navbar */
+  }
+  
+.home-title {
+    font-size: 3.5em;       /* Larger font size for header */
+    color: #000000;         /* Darker green text color */
+    margin-bottom: 10px;  
+  } 
+  
+  .home-logo {
+    display: block;      /* Ensures it behaves like a block element */
+    width: auto;         /* Keeps the aspect ratio */
+    height: 400px;        /* Adjust logo size */
+    margin: 0;           /* Removes any default margins */
+    padding: 0;          /* Removes extra space */
+    margin-left: 40px;
+  }  
+
+
+.home-image {
+    width: 100%;            /* Adjust to fit the screen width */
+    max-width: 600px;       /* Limit the maximum width */
+    height: auto;           /* Maintain aspect ratio */
+    margin-top: 20px;       /* Space above the image */
+    border-radius: 10px;    /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+   }
