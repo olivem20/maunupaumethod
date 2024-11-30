@@ -7,7 +7,9 @@ import Programs from './pages/Programs';
 import Coaches from './pages/Coaches';
 import BookLesson from './pages/BookLesson';
 import RegisterLogIn from './pages/RegisterLogIn';
+import Account from './pages/Account';
 import Navbar from './components/Navbar';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route path="/coaches" element={<Coaches />} />
         <Route path="/book-lesson" element={<BookLesson />} />
         <Route path="/auth" element={<RegisterLogIn />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   );

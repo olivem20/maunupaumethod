@@ -6,8 +6,8 @@
   top: 0;                      /* Align the navbar to the top */
   left: 0;                     /* Align the navbar to the left */
   width: 100%;                 /* Make the navbar full-width */
-  height: 100px;                /* Increase height for a thicker bar */
-  background-color: #3b9126;   /* Background color for the navbar */
+  height: 80px;                /* Increase height for a thicker bar */
+  background-color: #041400f3;   /* Background color for the navbar */
   color: white;                /* Text color for the navbar */
   padding: 0 0px;             /* Add margin on the left and right */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
@@ -29,10 +29,17 @@
   font-weight: bold;           /* Make the links bold */
 }
 
+/* Exclude .navbar-button from this rule */
+.navbar-links a.navbar-button {
+  color: initial; /* Reset color for the Register/Login button */
+}
+
+
 .logo {
-  height: 70px;                /* Adjust logo size */
-  width: auto;                 /* Maintain aspect ratio */
-  margin-right: 450px;          /* Add spacing between logo and links */
+  height: 120px;                /* Adjust logo size */
+  width: auto;
+  margin-top: 20px;                 /* Maintain aspect ratio */
+  margin-right: 200px;          /* Add spacing between logo and links */
 }
 
 .navbar-links a:hover {
@@ -88,4 +95,44 @@
 /* Dropdown arrow styling */
 .dropdown-arrow {
   font-size: 0.6rem;           /* Adjust arrow size (smaller than text) */
+}
+
+.navbar-button {
+  display: float;
+  padding: 10px 20px; /* Increase padding for a bigger button */
+  background-color: #ffffff; /* Button background color (white) */
+  color: #000000; /* Text color (blue) */
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: bold; /* Make the text bold */
+  border: 2px solid #21a300; /* Add a blue border */
+  border-radius: 25px; /* Fully rounded edges */
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover Effect */
+.navbar-button:hover {
+  background-color: #008c15; /* Change background to blue on hover */
+  color: #ffffff; /* Change text to white on hover */
+  border-color: #09b300; /* Darken border color on hover */
+}
+
+
+/* Logout Button */
+.logout-button {
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
 }

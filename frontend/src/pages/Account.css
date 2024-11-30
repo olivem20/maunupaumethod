@@ -1,0 +1,35 @@
+/* Navbar Button for My Account */
+.navbar-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #3b9126;
+    border: 2px solid #3b9126;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-button:hover {
+    background-color: #3b9126;
+    color: #ffffff;
+}
+
+/* Logout Button */
+.logout-button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
