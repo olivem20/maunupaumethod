@@ -2,7 +2,8 @@ const cors = require('cors');
 const express = require('express');
 const path = require("path");
 const bcrypt = require("bcrypt");
-const collection = require("./config");
+const { User, Lesson } = require("./config");
+const lessonRoutes = require("./lessonRoutes");
 
 const app = express();
 
@@ -55,8 +56,8 @@ app.post("/signup", async (req, res) => {
     const { firstName, lastName, email, phoneNumber, password } = req.body;
 
     try {
-        // Check if user already exists by email
-        const existingUser = await collection.findOne({ email }); // Use email here
+        // Check if the user already exists by email
+        const existingUser = await User.findOne({ email }); // Use User model here
         if (existingUser) {
             return res.status(400).send("An account with this email already exists.");
         }
@@ -65,19 +66,19 @@ app.post("/signup", async (req, res) => {
         const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-        // Create the user
-        const newUser = {
+        // Create a new user
+        const newUser = new User({
             firstName,
             lastName,
             email,
             phoneNumber,
-            password: hashedPassword, // Store the hashed password
-        };
+            password: hashedPassword,
+            lessonsPurchased: [], // Initialize lessonsPurchased as empty
+        });
 
-        await collection.insertMany(newUser);
+        await newUser.save(); // Save the user to the database
 
-        // Send a success response
-        res.status(201).send("Signup successful! You can now log in.");
+        res.status(201).send("Signup successful! Your account has been created.");
     } catch (error) {
         console.error("Error during signup:", error);
         res.status(500).send("An error occurred. Please try again.");
@@ -85,12 +86,13 @@ app.post("/signup", async (req, res) => {
 });
 
 
+
 //login user
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
     try{
-        const check = await collection.findOne({ email });
+        const check = await User.findOne({ email });
         if(!check) {
             res.send("User cannot be found");
         }
@@ -105,6 +107,8 @@ app.post("/login", async (req, res) => {
         res.send("Wrong detail");
     }
 })
+
+app.use("/api/lessons", lessonRoutes);
 
 const port = 5001;
 app.listen(port, () => {

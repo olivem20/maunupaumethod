@@ -41,8 +41,30 @@ const LoginSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    lessonsPurchased: [
+        {
+          lessonId: { type: mongoose.Schema.Types.ObjectId, ref: "Lesson" },
+          purchasedAt: { type: Date, default: Date.now }, // Timestamp of purchase
+        },
+      ],
 });
-const collection = new mongoose.model("users", LoginSchema);
 
-module.exports = collection;
+const LessonSchema = new mongoose.Schema({
+    type: { type: String, required: true }, // Private, Group, or Package
+    price: { type: Number, required: true },
+    purchasedBy: [
+      {
+        userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        purchasedAt: { type: Date, default: Date.now }, // Timestamp of purchase
+      },
+    ],
+    totalPurchases: { type: Number, default: 0 }, // Track how many times purchased
+  });
+  
+
+
+const User = new mongoose.model("users", LoginSchema);
+const Lesson = new mongoose.model("lessons", LessonSchema);
+
+module.exports = {User, Lesson};
 

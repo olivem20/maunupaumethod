@@ -39,7 +39,7 @@
   height: 120px;                /* Adjust logo size */
   width: auto;
   margin-top: 20px;                 /* Maintain aspect ratio */
-  margin-right: 200px;          /* Add spacing between logo and links */
+  margin-right: 580px;          /* Add spacing between logo and links */
 }
 
 .navbar-links a:hover {

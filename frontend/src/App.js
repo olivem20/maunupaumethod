@@ -5,10 +5,10 @@ import Home from './pages/Home';
 import OurStory from './pages/OurStory';
 import Programs from './pages/Programs';
 import Coaches from './pages/Coaches';
-import BookLesson from './pages/BookLesson';
 import RegisterLogIn from './pages/RegisterLogIn';
 import Account from './pages/Account';
 import Navbar from './components/Navbar';
+import BookLesson from './pages/BookLesson';
 
 
 
@@ -21,9 +21,9 @@ function App() {
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/coaches" element={<Coaches />} />
-        <Route path="/book-lesson" element={<BookLesson />} />
         <Route path="/auth" element={<RegisterLogIn />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/book-lesson" element={<BookLesson />} />
       </Routes>
     </Router>
   );

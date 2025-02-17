@@ -39,7 +39,6 @@ function Navbar() {
           </ul>
         </li>
         <li><Link to="/coaches">Coaches</Link></li>
-        <li><Link to="/book-lesson">Book a Lesson!</Link></li>
 
         {isLoggedIn ? (
           <li className="dropdown">

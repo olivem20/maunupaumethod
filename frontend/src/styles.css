@@ -2,8 +2,8 @@
 /* Set a light green background for the entire website */
 body {
     font-family: 'DM Serif Text', serif; /* Primary font for body text */
-    background-color: #f0f9eb;                /* Light green background */
-    color: #3b9126;                           /* Dark green text */
+    background-color: #fcfff9;                /* Light green background */
+    color: #1a3d11;                           /* Dark green text */
     margin: 0;
 }
   
